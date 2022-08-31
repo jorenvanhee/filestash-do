@@ -1,7 +1,9 @@
 spec:
-  name: sample-golang
+  name: filestash
   services:
   - name: web
-    git:
-      branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-golang.git
+    image:
+      registry_type: DOCKER_HUB
+      registry: machines
+      repository: filestash
+    http_port: 8334
